@@ -20,6 +20,7 @@
 		607F1F2223D45259007210E4 /* CalendarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 607F1F2123D45259007210E4 /* CalendarManager.m */; };
 		607F1F2D23D47776007210E4 /* RNTMapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 607F1F2C23D47776007210E4 /* RNTMapManager.m */; };
 		60EBAE1223DEFD2000DCC307 /* RNTNaverMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EBAE1123DEFD2000DCC307 /* RNTNaverMap.m */; };
+		60EBAE1623DF04FB00DCC307 /* api.plist in Resources */ = {isa = PBXBuildFile; fileRef = 60EBAE1523DF04FB00DCC307 /* api.plist */; };
 		9F7FB1F1560B51F543B11C24 /* libPods-nativeModuleTutorialTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE8E3CC7380D058058BAF623 /* libPods-nativeModuleTutorialTests.a */; };
 		AF0483DF0753F2F0F744CAE7 /* libPods-nativeModuleTutorial.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ABC7CB18A36D740F78F547A /* libPods-nativeModuleTutorial.a */; };
 		B60CE369AA9D3377A5E742A8 /* libPods-nativeModuleTutorial-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B37A4A57CC7F2B1215DADC2 /* libPods-nativeModuleTutorial-tvOS.a */; };
@@ -66,6 +67,7 @@
 		607F1F2323D45275007210E4 /* CalendarManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalendarManager.h; sourceTree = "<group>"; };
 		607F1F2C23D47776007210E4 /* RNTMapManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNTMapManager.m; sourceTree = "<group>"; };
 		60EBAE1123DEFD2000DCC307 /* RNTNaverMap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNTNaverMap.m; sourceTree = "<group>"; };
+		60EBAE1523DF04FB00DCC307 /* api.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = api.plist; sourceTree = "<group>"; };
 		68D43AD9863A7B2474EA8702 /* Pods-nativeModuleTutorial-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nativeModuleTutorial-tvOS.release.xcconfig"; path = "Target Support Files/Pods-nativeModuleTutorial-tvOS/Pods-nativeModuleTutorial-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		9ABC7CB18A36D740F78F547A /* libPods-nativeModuleTutorial.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-nativeModuleTutorial.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C43EB95A79F736CDC83E5AED /* Pods-nativeModuleTutorial-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nativeModuleTutorial-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-nativeModuleTutorial-tvOS/Pods-nativeModuleTutorial-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				607F1F2323D45275007210E4 /* CalendarManager.h */,
 				607F1F2C23D47776007210E4 /* RNTMapManager.m */,
 				60EBAE1123DEFD2000DCC307 /* RNTNaverMap.m */,
+				60EBAE1523DF04FB00DCC307 /* api.plist */,
 			);
 			name = nativeModuleTutorial;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				60EBAE1623DF04FB00DCC307 /* api.plist in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

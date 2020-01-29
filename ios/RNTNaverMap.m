@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 #import <React/RCTViewManager.h>
-#import <NMapsMap/NMFMapView.h>
+#import <NMapsMap/NMFNaverMapView.h>
 
 @interface RNTNaverMap : RCTViewManager
 @end
@@ -20,7 +20,16 @@ RCT_EXPORT_MODULE(NaverMap);
 
 - (UIView *)view
 {
-  return [[NMFMapView alloc] init];
+//  NMFNaverMapView *naverMapView = [[NMFNaverMapView alloc] initWithFrame:self.view.frame];
+//  [self.view addSubview:naverMapView];
+  
+//  return [[NMFNaverMapView alloc] init];
+//  return [[NMFMapView alloc] init];
+  
+  UIView *containerView = [[UIView alloc] init];
+  NMFNaverMapView *naverMapView = [[NMFNaverMapView alloc] initWithFrame:containerView.reactContentFrame];
+
+  return naverMapView;
 }
 
 
