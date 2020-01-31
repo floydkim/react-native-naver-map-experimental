@@ -8,26 +8,18 @@
 
 import React from 'react';
 import {
+    SafeAreaView,
     View,
     Text,
 } from 'react-native';
 import NaverMap from './components/NaverMapView';
 
-import {
-    getIPhoneHomeBottomHeight,
-    getIPhoneStatusBarHeight,
-} from './Utils/Utils';
 import { Styles } from './Utils/Styles';
 
 
 const App: () => React$Node = () => {
     return (
-        <View
-            style={ {
-                flex: 1,
-                paddingTop: getIPhoneStatusBarHeight(),
-                paddingBottom: getIPhoneHomeBottomHeight(),
-            } }>
+        <SafeAreaView style={ { flex: 1 } }>
             <View
                 style={ {
                     height: 60,
@@ -47,7 +39,7 @@ const App: () => React$Node = () => {
                 } }>
                 <Text style={ { fontSize: Styles.Size.P2 } }>some texts on footer</Text>
             </View>
-        </View>
+        </SafeAreaView>
     );
 };
 
