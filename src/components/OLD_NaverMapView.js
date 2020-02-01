@@ -1,3 +1,3 @@
 import { requireNativeComponent } from 'react-native';
 
-module.exports = requireNativeComponent('NaverMapView');
+module.exports = requireNativeComponent('NaverMap');
