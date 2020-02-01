@@ -15,10 +15,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+  NSArray *stringList = @[@"nativeMessage1", @"nativeMessage2"];
+  NSDictionary *props = @{@"messages": stringList};
+  
   RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
   RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
                                                    moduleName:@"nativeModuleTutorial"
-                                            initialProperties:nil];
+                                            initialProperties:props];
+  
+//  NSDictionary *appProps = @{@"appProps": @"App Properties"};
+//  rootView.appProperties = appProps;
 
   rootView.backgroundColor = [[UIColor alloc] initWithRed:1.0f green:1.0f blue:1.0f alpha:1];
 

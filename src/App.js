@@ -17,7 +17,11 @@ import NaverMap from './components/NaverMapView';
 import { Styles } from './Utils/Styles';
 
 
-const App: () => React$Node = () => {
+type Props = {
+    messages: Array<String>, // any
+}
+
+const App: (Props) => React$Node = (props) => {
     return (
         <SafeAreaView style={ { flex: 1 } }>
             <View
@@ -28,8 +32,14 @@ const App: () => React$Node = () => {
                     borderBottomWidth: 1,
                 } }>
                 <Text style={ { fontSize: Styles.Size.P2 } }>some texts on header</Text>
+                { props.messages.map(message => <Text
+                    key={ message }
+                    style={ { fontSize: Styles.Size.P2 } }>{ message }</Text>) }
             </View>
-            <NaverMap style={ { flex: 1 } } />
+            <NaverMap
+                style={ { flex: 1 } }
+                showLocationButton
+            />
             <View
                 style={ {
                     height: 60,
