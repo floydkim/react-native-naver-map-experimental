@@ -38,7 +38,8 @@ RCT_EXPORT_VIEW_PROPERTY(showLocationButton, BOOL);
 //  viewController.view = naverMapView;
   
   naverMapView.mapView.liteModeEnabled = NO;
-//  naverMapView.showIndoorLevelPicker = YES; // not working
+  naverMapView.mapView.indoorMapEnabled = YES;
+  naverMapView.showIndoorLevelPicker = YES;
 
 
   return naverMapView;
