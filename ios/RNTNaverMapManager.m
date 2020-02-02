@@ -48,9 +48,10 @@ RCT_EXPORT_MODULE(NaverMapView)
   NSLog(@"%f, %f", latlng.lat, latlng.lng);
 }
 
-- (BOOL)mapView:(NMFMapView *)mapView didTapSymbol:(nonnull NMFSymbol *)symbol {
+- (BOOL)mapView:(NMFMapView *)mapView didTapSymbol:(nonnull NMFSymbol *)symbol
+{
   NSLog(@"%@", symbol.caption);
-  return YES;
+  return NO; // NO: NMFMapView까지 이벤트가 전달되어 NMFMapViewDelegate의 didTapMapView가 호출됨
 }
 
 @end
