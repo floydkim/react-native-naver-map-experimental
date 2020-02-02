@@ -38,7 +38,10 @@ const App: (Props) => React$Node = (props) => {
             </View>
             <NaverMap
                 style={ { flex: 1 } }
-                // showLocationButton
+                showLocationButton
+                onTapMapView={ (event) => {
+                    console.log(event);
+                } }
             />
             <View
                 style={ {

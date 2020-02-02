@@ -12,7 +12,7 @@
 @interface RNTNaverMapView : NMFNaverMapView
 //+ (RNTNaverMapView *)init;
 
-//@property (nonatomic, copy) RCTBubblingEventBlock didTapMapView;
+@property (nonatomic, copy) RCTBubblingEventBlock onTapMapView;
 
 
 @end

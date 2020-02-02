@@ -11,6 +11,8 @@
 #import <NMapsMap/NMFMapViewDelegate.h>
 #import <NMapsMap/NMGLatLng.h>
 #import <NMapsMap/NMFSymbol.h>
+#import <NMapsMap/NMFMapView.h>
+#import <NMapsMap/NMFCameraUpdate.h>
 
 @interface RNTNaverMapManager : RCTViewManager <NMFMapViewDelegate>
 @end
@@ -19,8 +21,8 @@
 
 RCT_EXPORT_MODULE(NaverMapView)
 
-//RCT_EXPORT_VIEW_PROPERTY(showLocationButton, BOOL)
-//RCT_EXPORT_VIEW_PROPERTY(didTapMapView, RCTBubblingEventBlock)
+RCT_EXPORT_VIEW_PROPERTY(showLocationButton, BOOL)
+RCT_EXPORT_VIEW_PROPERTY(onTapMapView, RCTBubblingEventBlock)
 
 //RCT_CUSTOM_VIEW_PROPERTY(region, NMGLatLng, NMFNaverMapView)
 //{
@@ -34,9 +36,12 @@ RCT_EXPORT_MODULE(NaverMapView)
   
   naverMapView.delegate = self;
   
-//  naverMapView.mapView.liteModeEnabled = NO;
-//  naverMapView.mapView.indoorMapEnabled = YES;
-//  naverMapView.showIndoorLevelPicker = YES;
+  NMFCameraUpdate *cameraUpdate = [NMFCameraUpdate cameraUpdateWithScrollTo:NMGLatLngMake(37.5666102, 126.9783881)];
+  [naverMapView.mapView moveCamera:cameraUpdate];
+  
+  naverMapView.mapView.liteModeEnabled = NO;
+  naverMapView.mapView.indoorMapEnabled = YES;
+  naverMapView.showIndoorLevelPicker = YES;
   
   return naverMapView;
 }
